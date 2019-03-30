@@ -15,6 +15,11 @@ class GamesController < ApplicationController
     render json: @games
   end
   
+  def update
+    @game.update(game_params)
+    render json: @game
+  end
+  
   private
 
     def game_params
